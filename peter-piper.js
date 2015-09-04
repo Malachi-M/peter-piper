@@ -22,10 +22,14 @@ var counter = 0;
 // TODO: Count the number of times an uppercase P or lowercase p character
 //       occurs in the `peterpiper` string.
 
-for(var i = 0; i < peterpiper.length; i++){
-    if(peterpiper.toLowerCase().charAt(i) === "p"){
-        counter++
-    }    
+function countOccurrences(string, char){
+        for(var i = 0; i < string.length; i++){
+            if( string.toLowerCase().charAt(i) === char){
+                counter++    
+            }    
+        }
+        return counter
 }
 
+var counter = countOccurrences(peterpiper, 'p')
 console.log("There are " + counter + " P's in Peter Piper.");
